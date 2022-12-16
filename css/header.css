@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+    font-size: 18px;
+}
+body {
+    font-family: 'Jost', sans-serif;
+}
+
+.title {
+    font-family: 'Patua One', cursive;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.banner {
+    background-image: url(../img/AdobeStock_341409259.jpeg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    
+    padding: 79px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    background-color: #181717;
+    color: #fdb745;
+    padding: 20px;
+    border-bottom: 1px solid #CC8105;
+}
+
+.menu {
+    background-color: #181717;
+    padding: 1em;
+    margin: 0;
+
+    height: 100%;
+    width: 90%;
+    max-width: 220px;
+
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: -100%;
+
+    transition: right 0.3s ease-out;
+}
+
+.menu__active .menu {
+    right: 0;
+}
+
+.menu__active::after {
+    content: "";
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.menu__open {
+    background-image: url(../img/menu.png);
+    background-repeat: no-repeat;
+    background-size: 27px;
+    height: 29px;
+    width: 27px;
+    background-color: transparent;
+    border: none;
+
+}
+
+.menu__close {
+    background-image: url(../img/close.png);
+    background-repeat: no-repeat;
+    background-size: 20px;
+    height: 29px;
+    width: 27px;
+    background-color: transparent;
+    border: none;
+    margin: 10px;
+}
+
+.menu__item {
+    color: #CC8105;
+    margin-bottom: 10px;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.menu__close {
+    margin-bottom: 45px;
+}
+
+.banner__title {
+    font-family: 'Patua One', cursive;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 2px 4px 7px rgba(0, 0, 0, 0.37);
+}
+
+.hidden-title {
+    display: none;
+}
+
+.appear-title {
+    display: block;
+    /* background-image: url(https://images.pexels.com/photos/2647939/pexels-photo-2647939.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); */
+}
+
+@media (min-width: 820px) {
+    .title {
+        font-size: 30px;
+    }
+
+    h1, .banner__title {
+        font-size: 25px;
+    }
+
+    .menu__item {
+        color: #fdb745;
+        font-size: 22px;
+    }
+
+    .banner {
+        min-height: 463px;
+        padding: 194px;
+    }
+}
