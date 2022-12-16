@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     font-size: 18px;
+    scroll-behavior: smooth;
 }
 body {
     font-family: 'Jost', sans-serif;
@@ -17,6 +18,7 @@ body {
     background-image: url(../img/AdobeStock_341409259.jpeg);
     background-size: 100%;
     background-repeat: no-repeat;
+    background-position-y: center;
     
     padding: 79px;
 }
@@ -131,5 +133,43 @@ header {
     .banner {
         min-height: 463px;
         padding: 194px;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    header {
+        padding: 40px;
+    }
+    .title {
+        margin-bottom: 40px;
+    }
+
+    .banner__title {
+font-size: 50px;
+    }
+
+    .menu__principal {
+        display: flex;
+    }
+
+    .menu {
+        padding: inherit;
+        margin: inherit;
+
+        height: inherit;
+        width: 100%;
+        max-width: inherit;
+
+        position: static;
+        z-index: 0;
+        top: 0;
+        right: 0;
+
+        transition: none;
+    }
+
+    .menu__open, .menu__close  {
+        display: none;
     }
 }
