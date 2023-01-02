@@ -20,7 +20,7 @@ document.documentElement.addEventListener('click', (e) => {
 });
 
 var banners = [{
-    img: "img/AdobeStock_341409259.jpeg",
+    img: "https://images.pexels.com/photos/10201880/pexels-photo-10201880.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     title: "Cortes para churrasco Uruguaios e Argentinos"
 },
 {
